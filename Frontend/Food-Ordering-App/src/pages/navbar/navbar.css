@@ -1,0 +1,44 @@
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #FAFAFA;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: -2.75rem;
+    height: 45px;
+    
+  }
+  
+  .top-navbar .location-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-navbar img {
+    margin-right: 10px;
+  }
+  .cl{
+    color: #FC8A06 ;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .cart-btn{
+    background-color: #028643;
+    margin: 0px;
+    margin-top: 0.5;
+    border-radius: 10px;
+    height:4.1rem;
+    margin-right: -40px;
+    border-color: #FAFAFA;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+  }
+
+  

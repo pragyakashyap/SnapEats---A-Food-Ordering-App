@@ -1,0 +1,154 @@
+/* McDonalds.css */
+.header-container {
+    width: 100%;
+  }
+  
+  .main-header {
+    background-color: #1a1a2e;
+    padding: 24px;
+    position: relative;
+  }
+  
+  .header-content {
+    color: white;
+  }
+  
+  .tagline {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .restaurant-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .info-badges {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .rating-card {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .rating-info {
+    text-align: center;
+  }
+  
+  .rating-number {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .stars {
+    color: #ffc107;
+    font-size: 14px;
+  }
+  
+  .review-count {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .food-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .bottom-section {
+    background-color: white;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+  }
+  
+  .opening-hours {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .clock-icon {
+    color: #ff9800;
+  }
+  
+  .offers-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 24px;
+  }
+  
+  .offers-title {
+    font-weight: bold;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 8px 16px 8px 40px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 256px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .rating-card {
+      position: static;
+      margin-top: 16px;
+    }
+    
+    .bottom-section {
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .offers-container {
+      flex-direction: column;
+      margin-left: 0;
+      gap: 16px;
+    }
+    
+    .search-input {
+      width: 100%;
+    }
+  }

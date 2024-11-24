@@ -1,5 +1,5 @@
-import { useState } from "react";
-import "./register.css";
+
+import "../login/login.css"
 import Logo from "../../assets/images/LOGO 2.png";
 import appstoreBadge from "../../assets/images/app-store-badges-en 1.png";
 import Instagram from "../../assets/images/Instagram.png";
@@ -7,63 +7,9 @@ import Facebook from "../../assets/images/Facebook.png";
 import Snapchat from "../../assets/images/Snapchat.png";
 import TikTok from "../../assets/images/TikTok.png";
 
-const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const Footer = () => {
   return (
     <div>
-      <div className="topContainer">
-        <div className="leftContainer">
-          <div className="form">
-            <h1>
-              <img src={Logo} />
-            </h1>
-            <h2 className="welcome-text">Welcome Back 👋</h2>
-            <p className="sub-text">
-              Today is a new day. It’s your day. You shape it. <br />
-              Sign in to start ordering.
-            </p>
-            <form className="Registerform">
-              <label>Name</label>
-              <input
-                type="String"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <label>Phone Number</label>
-              <input
-                type="number"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <label>Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-
-              <label>Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-
-              <button>Continue</button>
-            </form>
-            <p className="signup-text">
-              Don’t you have an account? <a href="#">Sign in</a>
-            </p>
-          </div>
-        </div>
-        <div className="rightContainer">
-          <img
-            src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732214695/Art_q1je1k.png"
-            alt="Art"
-          />
-        </div>
-      </div>
       <div className="footer">
         <div className="footer-left">
           <h2 className="footer-logo">
@@ -130,4 +76,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Footer;
