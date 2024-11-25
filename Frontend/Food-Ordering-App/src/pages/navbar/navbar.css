@@ -7,7 +7,7 @@
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-top: -2.75rem;
+    margin-top: 0rem;
     height: 45px;
     
   }
@@ -18,20 +18,20 @@
   }
   
   .top-navbar img {
-    margin-right: 10px;
+    margin-right: 4px;
   }
   .cl{
     color: #FC8A06 ;
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   .cart-btn{
     background-color: #028643;
     margin: 0px;
-    margin-top: 0.5;
+    margin-top: -1.7rem;
     border-radius: 10px;
-    height:4.1rem;
+    height:4.5rem;
     margin-right: -40px;
     border-color: #FAFAFA;
     width: 300px;

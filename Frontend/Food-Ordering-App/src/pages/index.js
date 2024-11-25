@@ -1,5 +1,5 @@
-import Login from "./login";
-import Register from "./register";
+import Login from "./authentication/login";
+import Register from "./authentication/register";
 import Header from './header'
 import Home from "./home";
 import Product from "./product"

@@ -1,31 +1,30 @@
-
-import "../login/login.css"
 import Logo from "../../assets/images/LOGO 2.png";
 import appstoreBadge from "../../assets/images/app-store-badges-en 1.png";
 import Instagram from "../../assets/images/Instagram.png";
 import Facebook from "../../assets/images/Facebook.png";
 import Snapchat from "../../assets/images/Snapchat.png";
 import TikTok from "../../assets/images/TikTok.png";
+import "./footer.css"
 
 const Footer = () => {
   return (
-    <div>
-      <div className="footer">
-        <div className="footer-left">
-          <h2 className="footer-logo">
-            <img src={Logo} />
-          </h2>
+    <>
+      <div className="footer" >
+        <div className="footer-left" style={{margin:'0px'}}>
+          <div className="footer-logo">
+            <img style={{width:"200px"}} src={Logo} />
+          </div>
           <div className="app-buttons">
             <img
+            style={{width:"270px"}}
               src={appstoreBadge}
               alt="Download on App Store and Google Play"
-              className="app-button"
             />
           </div>
-          <p>Company #490033-445, Registered with House of Companies.</p>
+          <p style={{margin:"0.5rem",marginTop:"0px"}}>Company #490033-445, Registered with House of Companies.</p>
         </div>
-        <div className="footer-middle">
-          <p>Get Exclusive Deals in your Inbox</p>
+        <div className="footer-middle" >
+          <p style={{fontWeight:'bold'}}>Get Exclusive Deals in your Inbox</p>
           <form className="subscribe-form">
             <input
               type="email"
@@ -36,7 +35,7 @@ const Footer = () => {
               Subscribe
             </button>
           </form>
-          <p>we wont spam, read our email policy</p>
+          <p>we wont spam, read our <span style={{textDecoration:'underline'}}>email policy</span></p>
           <div className="icons">
             <img src={Facebook}></img>
             <img src={Instagram}></img>
@@ -44,15 +43,15 @@ const Footer = () => {
             <img src={Snapchat}></img>
           </div>
         </div>
-        <div className="footer-right">
-          <div className="left">
-            <h4>Legal Pages</h4>
+        <div className="footer-right" style={{margin:'0px'}}>
+          <div className="left" style={{width:'50%'}}>
+            <h4 style={{fontWeight:'900'}}>Legal Pages</h4>
             <p>Terms and conditions</p>
             <p>Privacy</p>
             <p>Cookies </p>
             <p>Modern Slavery Statement</p>
           </div>
-          <div className="right">
+          <div className="right" style={{width:'50%'}}>
             <h4>Important Links</h4>
             <p>Get help</p>
             <p>Add your restaurant</p>
@@ -61,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bottom-container">
+      <div  className="bottom-container">
         <div className="left-bottom-container">
           <p>Order.uk Copyright 2024, All Rights Reserved.</p>
         </div>
@@ -71,8 +70,8 @@ const Footer = () => {
           <p>Pricing</p>
           <p>Do not sell or share my personal information</p>
         </div>
-      </div>
     </div>
+    </>
   );
 };
 

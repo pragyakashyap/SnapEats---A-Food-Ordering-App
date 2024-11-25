@@ -17,7 +17,7 @@ const Header = () => {
         <button>Track Order</button>
       </div>
       <div className="profile">
-        <img style={{marginRight:"-15px"}} src={user} />
+        <img  src={user} />
         <span>Login/Signup</span>
       </div>
     </div>

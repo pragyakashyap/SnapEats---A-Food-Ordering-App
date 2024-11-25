@@ -14,7 +14,7 @@ const Home = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="home-page">
+    <>
       <Navbar/>
       <Header />
       <Hero />
@@ -86,7 +86,7 @@ const Home = () => {
       {/* <Footer /> */}
       <Data/>
       <Footer/>
-    </div>
+    </>
   );
 };
 

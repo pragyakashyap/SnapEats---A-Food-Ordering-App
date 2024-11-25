@@ -45,10 +45,10 @@ const Navbar = () => {
           </>
         )}
       </div>
-      <div className="cart-div">
+      <div className="cart-div" style={{paddingTop:'1.5rem'}}>
         <div className="cart-btn">
           <img
-            style={{ height: "40px", width: "40px", marginRight: "1rem" }}
+            style={{ height: "40px", width: "40px", marginLeft:'1rem'}}
             src={cart}
             alt="Cart"
           />

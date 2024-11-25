@@ -1,0 +1,50 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-container{
+  padding: 1rem;
+  background-size: cover;
+  width: 40%;
+}
+.left-container{
+  margin: auto;
+}
+.right-container,.left-container{
+  height: 100%;
+  
+  
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.logo{
+ text-align:center;
+}
+form input{
+  border-radius: 25px;
+  padding: 8px ;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.register,.Login{
+  background-color: #FC8A06;
+  color:white;
+  border-radius: 25px;
+  padding: 0.5rem;
+  border: none;
+}
+label{
+  margin-bottom: 0.3rem;
+}
+form input {
+
+  border-color: 1px solid #8897AD;
+
+}
+.signup-text{
+  text-align: center;
+}

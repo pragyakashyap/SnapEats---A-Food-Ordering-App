@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, Login, Product, Register } from "./pages";
 
 import "@fontsource/poppins"; // Defaults to weight 400
+import "@fontsource/poppins/700.css"; // Specify weight
 
 function App() {
   return (

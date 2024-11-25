@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     /* Remove gap and use margin for control */
+    
   }
 .restaurant-image {
     width: 100%;

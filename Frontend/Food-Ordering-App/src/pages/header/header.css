@@ -4,10 +4,12 @@
   align-items: center;
   margin: 0px;
   margin-top: 10px;
+  
 }
 
-* {
+body {
   font-size: 15px;
+  
 }
 .profile {
   display: flex;
@@ -15,7 +17,7 @@
   background-color: black;
   border-radius: 35px;
   color: white;
-  height: 55px;
+  padding: 10px 20px;
   justify-content: center;
 }
 .buttons button {
