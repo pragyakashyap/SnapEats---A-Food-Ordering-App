@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer" >
         <div className="footer-left" style={{margin:'0px'}}>
           <div className="footer-logo">
-            <img style={{width:"200px"}} src={Logo} />
+            <img style={{width:"150px"}} src={Logo} />
           </div>
           <div className="app-buttons">
             <img

@@ -14,8 +14,9 @@ const DealsSection = () => {
 
   return (
     <div className="deals-section">
+      <div className="top">
       <h2>
-        Up to <span className="highlight">-40%</span> 🎉 Order.uk exclusive deals
+        Up to -40% 🎊 Order.uk exclusive deals
       </h2>
       <div className="categories">
         <button>Vegan</button>
@@ -23,12 +24,14 @@ const DealsSection = () => {
         <button className="active">Pizza & Fast food</button>
         <button>Others</button>
       </div>
+      </div>
       <div className="deals-container">
         {deals.map((deal) => (
           <div className="deal-card" key={deal.id}>
             <div className="discount">{deal.discount}</div>
             <img src={deal.image} alt={deal.name} className="deal-image" />
             <div className="deal-info">
+              <p>Restaurant</p>
               <h4>{deal.name}</h4>
             </div>
           </div>

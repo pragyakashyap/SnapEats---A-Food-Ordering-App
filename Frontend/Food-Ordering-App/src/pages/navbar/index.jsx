@@ -45,19 +45,21 @@ const Navbar = () => {
           </>
         )}
       </div>
-      <div className="cart-div" style={{paddingTop:'1.5rem'}}>
-        <div className="cart-btn">
+      <div className="cart-div">
+        <div className="cart-btn" style={{ cursor: "pointer" }}>
           <img
-            style={{ height: "40px", width: "40px", marginLeft:'1rem'}}
+            style={{ height: "30px", width: "30px", marginLeft: "1rem" }}
             src={cart}
             alt="Cart"
           />
           My Cart
-          <img
-            style={{ height: "35px", width: "35px", marginLeft: "6.5rem" }}
-            src={icon}
-          />
         </div>
+
+        <img
+          className="arrow"
+          style={{ height: "30px", width: "30px", margin: "0 1.25rem" }}
+          src={icon}
+        />
       </div>
     </header>
   );

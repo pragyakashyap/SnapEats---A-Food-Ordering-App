@@ -1,3 +1,7 @@
+.home-page{
+  margin: 0 2rem;
+}
+
 .restaurant-container {
     display: flex;
     flex-wrap: wrap;

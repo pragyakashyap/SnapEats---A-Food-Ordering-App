@@ -5,10 +5,10 @@ const Header = () => {
   return (
     <div className="header-nav">
       <div className="logo">
-        <img src={Logo} />
+        <img style={{width:'150px'}} src={Logo} />
       </div>
       <div className="buttons">
-        <button autoFocus className="default-selected">
+        <button className="default-selected">
           Home
         </button>
         <button>Browse Menu</button>
