@@ -1,27 +1,32 @@
 /* McDonalds.css */
 .header-container {
     width: 100%;
+    background-color: #03081F;
+    border-radius: 10px;
   }
   
   .main-header {
-    background-color: #1a1a2e;
+  
     padding: 24px;
     position: relative;
+    padding: 3rem;
   }
   
   .header-content {
     color: white;
+    margin-top: 8%;
   }
   
   .tagline {
     font-size: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
   }
   
   .restaurant-name {
-    font-size: 24px;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-size: 50px;
     margin-bottom: 16px;
+    margin-top: 0px;
   }
   
   .info-badges {
@@ -30,13 +35,14 @@
   }
   
   .badge {
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     border-radius: 999px;
-    padding: 8px 16px;
+    padding: 8px 20px;
     font-size: 14px;
     display: flex;
     align-items: center;
     gap: 8px;
+    border: 0.1px solid white;
   }
   
   .rating-card {
@@ -54,6 +60,7 @@
   
   .rating-info {
     text-align: center;
+    background-color: white;
   }
   
   .rating-number {

@@ -9,6 +9,8 @@ import Faq from "./faq";
 import Data from "./data";
 import {useNavigate} from "react-router-dom"
 import Navbar from "../navbar";
+import Restaurant from "./restaurants";
+import Cards from "./card";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -21,6 +23,11 @@ const Home = () => {
       <Hero/>
       <DealsSection />
       <Categories/>
+      <Restaurant/>
+      <AppDownloadBanner/>
+      <Cards/>
+      <Faq/>
+      <Data/>
     </div>
     <Footer/>
     </>

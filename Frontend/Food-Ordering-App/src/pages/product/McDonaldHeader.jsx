@@ -2,6 +2,8 @@
 import React from 'react';
 import { Clock, Search, Bike } from 'lucide-react';
 import './McDonalds.css';
+import complete from "./complete.png"
+
 
 const McDonaldsHeader = () => {
   return (
@@ -18,22 +20,20 @@ const McDonaldsHeader = () => {
           {/* Info badges */}
           <div className="info-badges">
             <div className="badge">
-              <span>Minimum Order: 12 GBP</span>
+              <img style={{width:'20px', height:'20px'}} src={complete}/>
+              <span>Minimum Order: 199 Rs</span>
             </div>
             <div className="badge">
-              <Bike size={16} />
+              <Bike size={20} />
               <span>Delivery in 20-25 Minutes</span>
             </div>
           </div>
         </div>
 
+
         {/* Rating card */}
-        <div className="rating-card">
-          <div className="rating-info">
-            <div className="rating-number">3.4</div>
-            <div className="stars">★★★☆☆</div>
-            <div className="review-count">1,250 reviews</div>
-          </div>
+        
+        <div className="rating-card" style={{ backgroundImage: 'url("https://res.cloudinary.com/dft6bqu4v/image/upload/v1732459959/Rectangle_44_vue7ti.png")'}}>
           <img 
             src={"https://res.cloudinary.com/dft6bqu4v/image/upload/v1732459959/Rectangle_44_vue7ti.png"}
             alt="McDonald's burger and fries"
@@ -42,28 +42,19 @@ const McDonaldsHeader = () => {
         </div>
       </div>
 
-      {/* Bottom section */}
-      <div className="bottom-section">
-        <div className="opening-hours">
-          <Clock size={20} className="clock-icon" />
-          <span>Open until 3:00 AM</span>
-        </div>
-        
-        {/* Title and search */}
-        <div className="offers-container">
-          <h2 className="offers-title">All Offers from McDonald's East London</h2>
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="Search from menu..."
-              className="search-input"
-            />
-            <Search size={16} className="search-icon" />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 
 export default McDonaldsHeader;
+
+
+      // {/* Bottom section */}
+      // <div className="bottom-section">
+      //   <div className="opening-hours">
+      //     <Clock size={20} className="clock-icon" />
+      //     <span>Open until 3:00 AM</span>
+      //   </div>
+        
+        
+      // </div>

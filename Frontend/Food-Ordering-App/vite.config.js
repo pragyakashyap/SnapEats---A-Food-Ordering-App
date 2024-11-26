@@ -5,5 +5,14 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    watch: {
+      usePolling: true, // Enable polling
+      interval: 100,    // Set polling interval
+    },
+    headers: {
+      'Cache-Control': 'no-store',
+    },
+  },
 })
 

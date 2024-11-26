@@ -13,7 +13,7 @@ const Data = () => {
     <div className="stats-section">
       {statsData.map((stat, index) => (
         <div className="stat" key={index}>
-          <h3>{stat.value}</h3>
+          <h1>{stat.value}</h1>
           <p>{stat.label}</p>
           {index < statsData.length - 1 && <div className="divider"></div>}
         </div>
