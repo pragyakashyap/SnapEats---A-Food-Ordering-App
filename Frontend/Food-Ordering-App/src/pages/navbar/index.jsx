@@ -1,8 +1,9 @@
 import { useState } from "react";
 import loc from "../../assets/images/Location.png";
-import cart from "../../assets/images/Cart.png";
+
 import "./navbar.css";
-import icon from "./arrow.png";
+import { Cart } from "../cart/cart";
+
 
 const Navbar = () => {
   const [location, setLocation] = useState("Regent Street, A4, A4201, London ");
@@ -45,22 +46,7 @@ const Navbar = () => {
           </>
         )}
       </div>
-      <div className="cart-div">
-        <div className="cart-btn" style={{ cursor: "pointer" }}>
-          <img
-            style={{ height: "30px", width: "30px", marginLeft: "1rem" }}
-            src={cart}
-            alt="Cart"
-          />
-          My Cart
-        </div>
-
-        <img
-          className="arrow"
-          style={{ height: "30px", width: "30px", margin: "0 1.25rem" }}
-          src={icon}
-        />
-      </div>
+<Cart/>
     </header>
   );
 };

@@ -23,7 +23,7 @@ const Home = () => {
       <Hero/>
       <DealsSection />
       <Categories/>
-      <Restaurant/>
+      <Restaurant title="Popular Restaurants"/>
       <AppDownloadBanner/>
       <Cards/>
       <Faq/>

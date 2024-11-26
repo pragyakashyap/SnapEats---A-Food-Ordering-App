@@ -1,7 +1,7 @@
 import "./Restaurant.css";
 import {useNavigate} from "react-router-dom"
 
-const Restaurant = () => {
+const Restaurant = ({title}) => {
   const popularRestaurants = [
     {
       name: "McDonald’s London ",
@@ -43,7 +43,7 @@ const Restaurant = () => {
 
   return (
     <div className="unique-categories-section">
-      <h2>Popular Restaurants</h2>
+      <h2>{title}</h2>
       <div className="unique-categories-container">
         {popularRestaurants.map((restaurant, index) => (
           <div onClick={handleClick} className="unique-category-card" key={index}>
