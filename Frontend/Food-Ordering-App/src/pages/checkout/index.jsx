@@ -38,6 +38,8 @@ const Checkout = () => {
   const navigate=useNavigate()
 
   const handleClick = ()=>{
+    const totalPrice = calculateTotal();
+  localStorage.setItem("totalPrice", totalPrice);
     navigate("/payment")
   }
 
