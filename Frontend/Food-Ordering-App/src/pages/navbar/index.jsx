@@ -5,7 +5,7 @@ import "./navbar.css";
 import { Cart } from "../cart/cart";
 
 
-const Navbar = () => {
+const Navbar = ({ isCartOpen, toggleCart }) => {
   const [location, setLocation] = useState("Regent Street, A4, A4201, London ");
   const [isEditing, setIsEditing] = useState(false);
   const [newLocation, setNewLocation] = useState(location);
@@ -46,7 +46,7 @@ const Navbar = () => {
           </>
         )}
       </div>
-<Cart/>
+<Cart isCartOpen={isCartOpen} toggleCart={toggleCart}/>
     </header>
   );
 };

@@ -1,9 +1,9 @@
 import Plus from "./Plus.png"
 
 
-export const AddCart = ({className}) => {
+export const AddCart = ({className,addToCart,item}) => {
   return (
-    <div className={className} style={{ zIndex: "1" }}>
+    <div onClick={() => addToCart(item)}  className={className} style={{ zIndex: "1" }}>
       <img
         style={{ width: "30px", height: "30px", marginRight: "8px" }}
         src={Plus}

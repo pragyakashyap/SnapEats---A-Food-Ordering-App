@@ -11,7 +11,6 @@ const ReviewCard = () => {
           src={Profile}
           style={{ height: "60px", width: "60px", borderRadius: "50%" }}
         />
-        <div className="divider"></div>
         <div className="reviewer-location">
           <p style={{ fontWeight: "bold", margin: "0" }}>St Glx</p>
           <p style={{ color: "#FC8A06", margin: "0" }}>South London</p>

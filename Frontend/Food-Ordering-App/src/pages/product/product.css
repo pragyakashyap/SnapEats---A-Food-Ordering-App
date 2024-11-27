@@ -21,3 +21,46 @@ body{
     bottom: -5.5%;
     cursor: pointer;
 }
+
+/* General Layout */
+.main-content {
+    padding: 20px;
+  }
+  
+  .content-sections {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .content-sections.cart-open {
+    gap: 20px; /* Space between sections when cart is open */
+  }
+  
+  .left-sections {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+ 
+  
+  .deals-section,
+  .categories-section {
+    width: 100%; /* Take up full width by default */
+  }
+  
+  /* Adjust for responsive behavior */
+  @media (max-width: 768px) {
+    .content-sections {
+      flex-wrap: wrap; /* Wrap sections on smaller screens */
+    }
+  
+    .cart-section {
+      width: 100%; /* Full width cart on smaller screens */
+      border-left: none;
+      box-shadow: none;
+    }
+  }
+  
