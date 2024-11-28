@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PaymentMethods from "./paymentMethods";
-import { DivIcon } from "leaflet";
+import { updateUser } from "../../services";
+import { getUser } from "../../services";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -16,16 +17,40 @@ const Profile = () => {
   };
 
   const [profile, setProfile] = useState({
-    name: "Mike Ross",
-    gender: "Male",
-    email: "mikeross@gmail.com",
-    country: "India",
+    name: "",
+    gender: "",
+    email: "",
+    country: "",
   });
 
   // State to manage form data and edit mode
   const [formData, setFormData] = useState(profile);
   const [isEditing, setIsEditing] = useState(false); // Controls edit mode
   const [tempData, setTempData] = useState(profile); // Temporary data for editing
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        alert("You must be logged in to view your profile.");
+        navigate("/login"); // Redirect to login page if not authenticated
+        return;
+      }
+
+      try {
+        const response = await getUser();
+        console.log("Fetched Data:", response);
+        setProfile(response); // Update profile state with fetched data
+        setFormData(response); // Update formData for editing
+        setTempData(response); // Set tempData for editing
+      } catch (error) {
+        console.error("Error fetching profile:", error);
+        alert("Failed to load profile data.");
+      }
+    };
+
+    fetchProfile();
+  }, [navigate]);
 
   // Handle input changes
   const handleInputChange = (e) => {
@@ -39,9 +64,24 @@ const Profile = () => {
   };
 
   // Save changes
-  const handleSave = () => {
-    setFormData(tempData); // Update the form data with temporary changes
-    setIsEditing(false); // Exit edit mode
+  const handleSave = async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("You must be logged in to update your profile");
+      return;
+    }
+
+    try {
+      const response = await updateUser(tempData);
+     
+        setFormData(tempData); // Update the form data with the saved changes
+        setIsEditing(false); // Exit edit mode
+        alert(response.message); // Show success message
+     
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong while saving your profile");
+    }
   };
 
   // Cancel changes
@@ -55,8 +95,8 @@ const Profile = () => {
       <div className="profile-page">
         <Navbar />
         <Header />
-       
-       <div className="order-title">
+
+        <div className="order-title">
           <div className="icon" onClick={navigateBack}>
             <FontAwesomeIcon size="lg" icon={faArrowLeft} />
           </div>
@@ -65,89 +105,101 @@ const Profile = () => {
           </div>
         </div>
         <div className="profile-page-container">
-        <div className="top-container">
-          <div className="name-div">
-            <img className="profile-img" src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732731903/Ellipse_11_uzzorb.png" />
-            <p>Mike Ross</p>
-          </div>
-          {/* Buttons */}
-          <div className="form-actions">
-            {!isEditing ? (
-              <div className="edit-button-div" type="button" onClick={handleEdit}>
-                Edit
-              </div>
-            ) : (
-              <>
-                <div className="edit-button-div" type="button" onClick={handleSave}>
-                  Save
-                </div>
-                <div className="edit-button-div" type="button" onClick={handleCancel}>
-                  Cancel
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-
-        <form onSubmit={handleSave} className="profile-form">
-            <div className="top-info">
-            <div className="form-group">
-            <label>Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={tempData.name}
-              onChange={handleInputChange}
-              disabled={!isEditing} // Disabled unless editing
-            />
-          </div>
-
-          <div className="form-group">
-            <label>Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={tempData.email}
-              onChange={handleInputChange}
-              disabled={!isEditing}
-            />
-          </div>
+          <div className="top-container">
+            <div className="name-div">
+              <img
+                className="profile-img"
+                src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732731903/Ellipse_11_uzzorb.png"
+              />
+              <p>{formData.name}</p>
             </div>
-          
-
-          <div className="top-info">
-          <div className="form-group">
-            <label>Gender:</label>
-            <select
-              name="gender"
-              value={tempData.gender}
-              onChange={handleInputChange}
-              disabled={!isEditing}
-            >
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
+            {/* Buttons */}
+            <div className="form-actions">
+              {!isEditing ? (
+                <div
+                  className="edit-button-div"
+                  type="button"
+                  onClick={handleEdit}
+                >
+                  Edit
+                </div>
+              ) : (
+                <>
+                  <div
+                    className="edit-button-div"
+                    type="button"
+                    onClick={handleSave}
+                  >
+                    Save
+                  </div>
+                  <div
+                    className="edit-button-div"
+                    type="button"
+                    onClick={handleCancel}
+                  >
+                    Cancel
+                  </div>
+                </>
+              )}
+            </div>
           </div>
 
-          <div className="form-group">
-            <label>Country:</label>
-            <input
-              type="text"
-              name="country"
-              value={tempData.country}
-              onChange={handleInputChange}
-              disabled={!isEditing}
-            />
-          </div>
+          <form onSubmit={handleSave} className="profile-form">
+            <div className="top-info">
+              <div className="form-group">
+                <label>Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={tempData.name}
+                  onChange={handleInputChange}
+                  disabled={!isEditing} // Disabled unless editing
+                />
+              </div>
 
-          </div>
-          
-        </form>
-        <PaymentMethods />
-       </div>
+              <div className="form-group">
+                <label>Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={tempData.email}
+                  onChange={handleInputChange}
+                  disabled={!isEditing}
+                />
+              </div>
+            </div>
+
+            <div className="top-info">
+              <div className="form-group">
+                <label>Gender:</label>
+                <select
+                  name="gender"
+                  value={tempData.gender}
+                  onChange={handleInputChange}
+                  disabled={!isEditing}
+                >
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label>Country:</label>
+                <input
+                  type="text"
+                  name="country"
+                  value={tempData.country}
+                  onChange={handleInputChange}
+                  disabled={!isEditing}
+                />
+              </div>
+            </div>
+          </form>
+          <PaymentMethods />
+        </div>
       </div>
-      
+
       <Footer />
     </>
   );

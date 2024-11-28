@@ -115,9 +115,7 @@
   }
 
   
-  button:disabled {
-    background-color: #FFB1B1;
-  }
+
 
   .total-amount{
     background-color: #FC8A06;

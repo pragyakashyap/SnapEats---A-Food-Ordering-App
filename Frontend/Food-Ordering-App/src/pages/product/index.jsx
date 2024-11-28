@@ -115,7 +115,7 @@ const Product = () => {
       <Reviews />
       <div className="product-page">
         <Restaurant title="Similar Restaurants" />
-        <CartModel isCartOpen={isCartOpen} toggleCart={toggleCart} />
+        <CartModel isCartOpen={isCartOpen} toggleCart={toggleCart} total={calculateTotal()} />
       </div>
       <Footer />
     </>

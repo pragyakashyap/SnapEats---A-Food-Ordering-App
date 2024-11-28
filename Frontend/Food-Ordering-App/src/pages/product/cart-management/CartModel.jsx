@@ -3,7 +3,7 @@ import Share from "./Share.png";
 import Basket from "./Basket.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 import Card from "./Card";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -22,11 +22,14 @@ const CartModel = ({
   const cardEmpty = cartItems.length === 0 ? true : false;
 
   const navigate = useNavigate();
-  const handleClick = () => {
-    if (cardEmpty) {
-      toast.error("This button is currently disabled", {
+  const handleClick = (e) => {
+    console.log(cartItems); 
+    if (cardEmpty || total < 199) {
+      toast.error(`Minimum delivery is  ₹199, You must Spend ₹${199-total} more for the checkout!`, {
         duration: 3000, // Optional: how long the toast will appear (in ms)
       });
+      e.preventDefault();
+      console.log("Card is empty, showing toast...");
     } else {
       navigate("/checkout");
     }
@@ -130,11 +133,12 @@ const CartModel = ({
       )}
 
       <button
-        disabled={cardEmpty}
-        onClick={handleClick}
+       
         className="checkout-button"
+        onMouseDown={handleClick}
+       style={{ backgroundColor: cardEmpty ? "#FFB1B1" : "" }}
       >
-        <FontAwesomeIcon icon={faArrowRight} />
+        <FontAwesomeIcon icon={faArrowCircleRight} />
         <span style={{ width: "80%", fontSize: "18px" }}>Checkout</span>
       </button>
     </div>
