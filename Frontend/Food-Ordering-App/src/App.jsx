@@ -6,6 +6,8 @@ import "@fontsource/poppins"; // Defaults to weight 400
 import "@fontsource/poppins/700.css"; // Specify weight
 import Payment from "./pages/payment";
 import OrderPlaced from "./pages/orderPlaced";
+import Address from "./pages/address";
+import Profile from "./pages/profile";
 
 function App() {
   return (
@@ -18,10 +20,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/product" element={<Product />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout />}/>
           <Route path="/payment" element={<Payment />} />
           <Route path="/orderPlaced" element={<OrderPlaced />} />
-          OrderPlaced
+          <Route path="/address" element={<Address />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>

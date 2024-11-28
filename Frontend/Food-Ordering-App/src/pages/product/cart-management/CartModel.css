@@ -137,3 +137,42 @@
     align-items: center;
     margin: 0px;
   }
+
+  .promotions{
+    display: flex;
+    justify-content: space-around;
+border-radius: 25px;
+align-items: center;
+    border: 1px solid #CCCCCC;
+    margin: 8px;
+ 
+  }
+
+  .delivery-collection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+  }
+
+  .delivery{
+    border: 1px solid #CCCCCC;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #EEEEEE;
+  }
+  .delivery p, .collection p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .delivery,.collection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dividing-line{
+    background-color: black ;
+    width: 1px;
+    height: 100%;
+  }
