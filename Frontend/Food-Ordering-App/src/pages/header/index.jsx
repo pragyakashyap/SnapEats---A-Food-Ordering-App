@@ -26,7 +26,7 @@ const Header = () => {
       </div>
       <div className="profile" onClick={handleClick}>
         <img  src={user} />
-        <span>Login/Signup</span>
+        <span>Hey {localStorage.getItem("username").split(" ")[0]}</span>
       </div>
     </div>
   );

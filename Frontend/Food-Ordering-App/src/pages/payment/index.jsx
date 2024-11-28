@@ -28,6 +28,7 @@ const Payment = () => {
 
   const handleClick = () => {
     navigate("/orderPlaced");
+   
   };
 
   return (

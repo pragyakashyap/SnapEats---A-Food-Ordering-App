@@ -9,22 +9,26 @@ import OrderPlaced from "./pages/orderPlaced";
 import Address from "./pages/address";
 import Profile from "./pages/profile";
 
+import { Toaster } from "react-hot-toast";
+import ProtectedRoute from "./ProtectedRoute";
+
 function App() {
   return (
     <>
+     <Toaster />
       <BrowserRouter
         future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
       >
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/checkout" element={<Checkout />}/>
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/orderPlaced" element={<OrderPlaced />} />
-          <Route path="/address" element={<Address />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/product" element={<ProtectedRoute><Product /></ProtectedRoute>} />
+          <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>}/>
+          <Route path="/payment" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
+          <Route path="/orderPlaced" element={<ProtectedRoute><OrderPlaced /></ProtectedRoute>} />
+          <Route path="/address" element={<ProtectedRoute><Address /></ProtectedRoute>} />
+          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
     </>

@@ -8,6 +8,8 @@
   border-radius: 10px;
   background-color: #FAFAFA;
   padding-right: 0%;
+  position: relative;
+  
 }
 
 .top-navbar .location-container {
@@ -32,6 +34,7 @@
   flex-direction: row;
   justify-content: space-between;
   border-radius: 10px;
+  
   
 }
 
