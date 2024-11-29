@@ -8,16 +8,16 @@ const Burger = ({ addToCart }) => {
       price: 120,
       image:
         "https://res.cloudinary.com/dft6bqu4v/image/upload/v1732612382/Rectangle_46_aljhvv.png",
-      ingredient: "1 McChicken™, 1 Big Mac™,  1 Royal Cheeseburger, 3 medium",
+      ingredient: "1 beef patty, cheese, lettuce, pickles, special sauce",
     },
     {
       id: 2,
-      name: "The classics for 3",
+      name: "Royal Cheese Burger",
       price: 120,
       image:
         "https://res.cloudinary.com/dft6bqu4v/image/upload/v1732612382/Rectangle_46_aljhvv.png",
       ingredient:
-        "1 McChicken™, 1 Big Mac™,  1 Royal Cheeseburger, 3 medium sized French Fries , 3 cold drinks",
+        "Grilled veggie patty, lettuce, tomato, cheese, whole-grain bun",
     },
     {
       id: 3,
@@ -26,16 +26,16 @@ const Burger = ({ addToCart }) => {
       image:
         "https://res.cloudinary.com/dft6bqu4v/image/upload/v1732612382/Rectangle_46_aljhvv.png",
       ingredient:
-        "1 McChicken™, 1 Big Mac™,  1 Royal Cheeseburger, 3 medium sized French Fries , 3 cold drinks",
+        "Crispy chicken patty, spicy mayo, lettuce, tomato, sesame bun",
     },
     {
       id: 4,
-      name: "The classics for 3",
+      name: "Bacon BBQ Burger",
       price: 120,
       image:
         "https://res.cloudinary.com/dft6bqu4v/image/upload/v1732612382/Rectangle_46_2_dwmmok.png",
       ingredient:
-        "1 McChicken™, 1 Big Mac™,  1 Royal Cheeseburger, 3 medium sized French Fries , 3 cold drinks",
+        "Beef patty, bacon, BBQ sauce, cheese, onion rings, brioche bun",
     },
   ];
   return (

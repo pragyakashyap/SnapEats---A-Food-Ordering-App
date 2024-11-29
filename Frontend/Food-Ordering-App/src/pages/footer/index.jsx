@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
         <div className="footer-middle" >
           <p style={{fontWeight:'bold'}}>Get Exclusive Deals in your Inbox</p>
-          <form className="subscribe-form">
+          <div className="subscribe-form">
             <input
               type="email"
               placeholder="youremail@gmail.com"
@@ -34,7 +34,7 @@ const Footer = () => {
             <button type="submit" className="subscribe-btn">
               Subscribe
             </button>
-          </form>
+          </div>
           <p>we wont spam, read our <span style={{textDecoration:'underline'}}>email policy</span></p>
           <div className="icons">
             <img src={Facebook}></img>

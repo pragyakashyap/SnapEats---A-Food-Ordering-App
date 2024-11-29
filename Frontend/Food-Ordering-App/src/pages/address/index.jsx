@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState,useEffect} from "react";
 import "./address.css";
 import Navbar from "../navbar";
 import Header from "../header";
@@ -7,37 +7,67 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import AddressModal from "./AddressModal";
+import { getAddresses, createAddress,deleteAddress } from "../../services";
 
 const Address = () => {
   const navigate = useNavigate();
+
   const navigateBack = () => {
     navigate("/checkout");
   };
 
-  const [addresses, setAddresses] = useState([
-    {
-      id: 1,
-      name: "Mike Ross",
-      address: "45, Green Street, Sector 12, New Delhi, 110011, India",
-      phone: "8734657485",
-      isDefault: true,
-    },
-    {
-      id: 2,
-      name: "Mike Ross",
-      address: "Office 704, Tower B, Techno Plaza, Bengaluru, Karnataka, 560000",
-      phone: "8934747362",
-      isDefault: false,
-    },
-  ]);
+
+
+  const [addresses, setAddresses] = useState([]);
+
+
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const [token, setToken] = useState(localStorage.getItem("token"));
+
+
+  useEffect(() => {
+    const fetchAddresses = async () => {
+      try {
+        const data = await getAddresses(token);
+        if (data && !data.message) {
+          setAddresses(data);
+        } else {
+          console.error("Error fetching addresses:", data.message);
+        }
+      } catch (error) {
+        console.error("Error fetching addresses:", error);
+      }
+    };
+
+    fetchAddresses();
+  }, [token]);
+
   // Function to handle adding a new address
-  const handleAddAddress = (newAddress) => {
-    setAddresses([...addresses, { ...newAddress, id: addresses.length + 1 }]);
-    setIsModalOpen(false); // Close modal after adding
+  const handleSave = async (newAddress) => {
+    try {
+      const savedAddress = await createAddress(newAddress, token);
+      console.log("Saved address:", savedAddress); // Log API response
+      setAddresses((prev) => [...prev, savedAddress]);
+      setIsModalOpen(false);
+    } catch (error) {
+      console.error("Error saving address:", error);
+    }
+};
+
+
+
+
+const handleRemove = async (id) => {
+  try {
+    await deleteAddress(id, token);
+    setAddresses((prev) => prev.filter((address) => address._id !== id));
+  } catch (error) {
+    console.error("Error removing address:", error);
+  }
   };
+  
 
 
   return (
@@ -64,13 +94,13 @@ const Address = () => {
         </div>
         {addresses.map((address) => (
           <div key={address.id} className="address-card">
-            <h3>{address.name}</h3>
-            <p>{address.address}</p>
+            <h3>{localStorage.getItem("username")}</h3>
+            <p>{address.fullAddress} {address.city} {address.state} {address.pincode} India</p>
             <p>Phone Number: {address.phone}</p>
             {address.isDefault && <button className="default-tag">Default</button>}
             <div className="actions">
               <button className="edit-button">Edit</button>
-              <button className="remove-button">Remove</button>
+              <button className="remove-button" onClick={() => handleRemove(address._id)}>Remove</button>
             </div>
           </div>
         ))}
@@ -81,7 +111,7 @@ const Address = () => {
       {isModalOpen && (
         <AddressModal
           onClose={() => setIsModalOpen(false)}
-          onSave={handleAddAddress}
+          onSave={handleSave}
         />
       )}
 

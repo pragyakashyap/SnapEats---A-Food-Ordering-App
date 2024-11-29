@@ -4,11 +4,10 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const AddressModal = ({ onClose, onSave }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    address: "",
+    fullAddress: "",
     city: "",
     state: "",
-    pinCode: "",
+    pincode: "",
     phone: "",
   });
 
@@ -19,7 +18,8 @@ const AddressModal = ({ onClose, onSave }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave(formData); // Pass the data back to the parent component
+    console.log("Submitting form data:", formData); 
+    onSave(formData); 
   };
 
   return (
@@ -50,9 +50,9 @@ const AddressModal = ({ onClose, onSave }) => {
           
           <input
             type="text"
-            name="pinCode"
+            name="pincode"
             placeholder="Pin Code"
-            value={formData.pinCode}
+            value={formData.pincode}
             onChange={handleChange}
             required
           />
@@ -66,14 +66,14 @@ const AddressModal = ({ onClose, onSave }) => {
           />
           </div>
           <textarea
-            name="address"
+            name="fullAddress"
             placeholder="Full Address"
-            value={formData.address}
+            value={formData.fullAddress}
             onChange={handleChange}
             required
           ></textarea>
          
-          <div className="modal-actions">
+          <div className="modal-click">
             <button type="button" onClick={onClose} className="cancel-address">
               Cancel
             </button>

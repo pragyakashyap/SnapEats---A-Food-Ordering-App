@@ -45,10 +45,7 @@ body{
   
  
   
-  .deals-section,
-  .categories-section {
-    width: 100%; /* Take up full width by default */
-  }
+
   
   /* Adjust for responsive behavior */
   @media (max-width: 768px) {

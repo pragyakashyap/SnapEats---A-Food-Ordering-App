@@ -73,11 +73,10 @@ const Profile = () => {
 
     try {
       const response = await updateUser(tempData);
-     
-        setFormData(tempData); // Update the form data with the saved changes
-        setIsEditing(false); // Exit edit mode
-        alert(response.message); // Show success message
-     
+
+      setFormData(tempData); // Update the form data with the saved changes
+      setIsEditing(false); // Exit edit mode
+      alert(response.message); // Show success message
     } catch (error) {
       console.error(error);
       alert("Something went wrong while saving your profile");

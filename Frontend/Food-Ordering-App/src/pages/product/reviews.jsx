@@ -23,6 +23,9 @@ const Reviews = () => {
        <ReviewCard/>
        <ReviewCard/>
        <ReviewCard/>
+       <div className="rating-review">
+        <img src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732641007/Rating_hchh84.png"/>
+       </div>
       </div>
     </div>
   );

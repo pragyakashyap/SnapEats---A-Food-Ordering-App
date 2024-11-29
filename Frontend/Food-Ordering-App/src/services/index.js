@@ -66,4 +66,49 @@ export const updateUser = async (data) => {
       throw new Error("Failed to fetch user data");
     }
   };
+
+  //Address
+  export const getAddresses = async (token) => {
+    const response = await fetch(`${BACKEND_URL}/api/addresses`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+    return response.json();
+  };
+  
+  export const createAddress = async (addressData, token) => {
+    const response = await fetch(`${BACKEND_URL}/api/addresses`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addressData),
+    });
+    return response.json();
+  };
+  
+  export const updateAddress = async (id, updatedData, token) => {
+    const response = await fetch(`${BACKEND_URL}/api/addresses/${id}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    });
+    return response.json();
+  };
+  
+  export const deleteAddress = async (id, token) => {
+    const response = await fetch(`${BACKEND_URL}/api/addresses/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.json();
+  };
   

@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import connectDB from "./db.js";
 import userRoutes from "./routes/authentication/user.js"
 import dealRoutes from "./routes/authentication/deals.js"
+import addressRoutes from "./routes/address/address.js"
 import bodyParser from "body-parser"
 import cors from "cors"
 
@@ -27,6 +28,7 @@ app.use(cors(corsOptions));
 
 app.use("/api/user",userRoutes)
 app.use("/api/deals",dealRoutes)
+app.use("/",addressRoutes)
 
 
 

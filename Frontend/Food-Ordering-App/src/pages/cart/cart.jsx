@@ -17,7 +17,7 @@ export const Cart = ({ isCartOpen, toggleCart }) => {
 
     <img
       className="arrow"
-      style={{ height: "30px", width: "30px", margin: "0 1.25rem" }}
+      style={{ height: "30px", width: "30px", margin: "12px 1.25rem" }}
       src={icon}
     />
     

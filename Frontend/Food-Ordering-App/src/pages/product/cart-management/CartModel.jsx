@@ -138,7 +138,7 @@ const CartModel = ({
         onMouseDown={handleClick}
        style={{ backgroundColor: cardEmpty ? "#FFB1B1" : "" }}
       >
-        <FontAwesomeIcon icon={faArrowCircleRight} />
+        <FontAwesomeIcon icon={faArrowCircleRight} size="2x"/>
         <span style={{ width: "80%", fontSize: "18px" }}>Checkout</span>
       </button>
     </div>

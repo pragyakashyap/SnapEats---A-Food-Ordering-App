@@ -43,6 +43,18 @@
 .review-card-container {
   display: flex;
   gap: 15px;
+  position: relative;
+}
+
+.rating-review{
+  position: absolute;
+  bottom: -45%;
+  left: 45%;
+}
+
+.rating-review img{
+  width: 125px;
+  height:125px;
 }
 
 .review-profile {

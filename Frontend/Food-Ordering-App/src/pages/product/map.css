@@ -17,7 +17,7 @@
     background-color:#03081F; /* Semi-transparent background */
     padding: 25px;
     border-radius: 8px;
-    z-index: 1000; /* Make sure it stays on top */
+    /* z-index: 1000; Make sure it stays on top */
     width: 20%;
   }
   
