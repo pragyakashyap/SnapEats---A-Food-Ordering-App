@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-const AddressModal = ({ onClose, onSave }) => {
+const AddressModal = ({onClose, onSave,initialData = {} }) => {
   const [formData, setFormData] = useState({
     fullAddress: "",
     city: "",
@@ -10,6 +10,13 @@ const AddressModal = ({ onClose, onSave }) => {
     pincode: "",
     phone: "",
   });
+
+    //Editing: Populate form fields with initial data 
+    useEffect(() => {
+      if (initialData) {
+        setFormData(initialData);
+      }
+    }, [initialData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +34,7 @@ const AddressModal = ({ onClose, onSave }) => {
       <div className="modal">
         <div className="add-address">
         <FontAwesomeIcon icon={faLocationDot} />
-        <p>Add Address</p>
+        <p>{initialData?._id ? "Edit Address" : "Add Address"}</p>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="update-address">
