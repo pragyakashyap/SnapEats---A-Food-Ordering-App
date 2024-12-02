@@ -155,23 +155,28 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .rating-card {
-    position: static;
-    margin-top: 16px;
-  }
 
   .bottom-section {
-    flex-direction: column;
-    gap: 16px;
+    display: none;
   }
 
   .offers-container {
-    flex-direction: column;
-    margin-left: 0;
-    gap: 16px;
+display: none;
+  }
+  .food-nav{
+    margin-top: 80px;
+    padding: 0rem !important;
+    padding-left: 20px !important;
+  }
+  .deals-section{
+    padding:0rem !important;
+  }
+  .deal-card{
+    width: auto !important;
+    height: auto !important;
   }
 
   .search-input {
-    width: 100%;
-  }
+    width:100%;
+}
 }

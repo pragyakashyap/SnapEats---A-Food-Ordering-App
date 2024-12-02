@@ -6,7 +6,7 @@ const Hero = () => {
 <div className="hero-container">
       {/* Left Section */}
       <div className="hero-left">
-        <p style={{color:'#03081F'}}>Order Restaurant food, takeaway and groceries.</p>
+        <p>Order Restaurant food, takeaway and groceries.</p>
         <h1>
           Feast Your Senses, <span>Fast and Fresh</span>
         </h1>

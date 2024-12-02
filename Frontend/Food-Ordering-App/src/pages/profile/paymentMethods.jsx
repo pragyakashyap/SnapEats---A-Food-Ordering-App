@@ -48,7 +48,7 @@ const PaymentMethods = () => {
             />
             <div className="card-item">
               <p>{card.cardNumber}</p>
-              <p>{card.name}</p>
+              <p>{localStorage.getItem("username")}</p>
             </div>
             <div className="edit-card" onClick={() => handleEditClick(card)}>
               <FontAwesomeIcon icon={faPen} />

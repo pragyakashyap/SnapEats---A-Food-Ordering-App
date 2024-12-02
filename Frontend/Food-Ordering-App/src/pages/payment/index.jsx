@@ -69,7 +69,7 @@ const Payment = () => {
 
             <Methods />
 
-            <div className="add-card" >
+            <div className="payment-add-card" >
             <img style={{width:'20px', height:'20px' }} src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732710260/Add_g92uk2.png"/>
             <p>Add Debit Card</p>
             </div>

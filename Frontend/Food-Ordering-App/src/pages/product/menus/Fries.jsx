@@ -37,7 +37,7 @@ const Fries = ({ addToCart }) => {
   ];
 
   return (
-    <div className="categories-section">
+    <div className="product-categories-section">
       <h2 style={{ color: "#FC8A06", fontSize: "30px" }}>Fries</h2>
       <div className="categories-container">
         {fries.map((fry) => (

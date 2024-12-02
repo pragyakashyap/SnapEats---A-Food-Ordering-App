@@ -44,21 +44,22 @@
 .subscribe-form {
   display: flex;
   flex-direction: row;
+
 }
 
 .subscribe-input {
   padding-left: 20px;
-border-top-left-radius: 25px;
-border-bottom-left-radius: 25px;
-  padding: 0.5rem;
-  border: none;
   background-color: #d9d9d9;
+  border: none;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+padding-right:20px;
 }
 .subscribe-btn {
   border-radius: 25px;
   padding: 0.5rem;
   border: none;
-  margin-left:-10px;
+  margin-left:-15px;
   background-color: #fc8a06;
   color: white;
 
@@ -91,6 +92,10 @@ border-bottom-left-radius: 25px;
     display: flex;
     flex-direction: column;
   }
+  .footer-left{
+    justify-content: center;
+    align-items: center;
+  }
   .footer div {
     width: 100%;
     text-align: center;
@@ -101,8 +106,59 @@ border-bottom-left-radius: 25px;
   .footer-right div {
     display: block;
     width: 100%;
+    text-align: left;
   }
-  .footer-middle {
+  .footer-middle{
+    width: 100% !important;
+    text-align: left !important;
+  }
+  .footer-middle p{
+    font-size: 18px;
+  }
+  .subscribe-input{
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  .subscribe-btn {
+    padding: 0.7rem;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .spam-text{
+    font-size: 13px !important;
+    text-align: center;
+  }
+  .left {
+    width: 100% !important;
+    text-align: left;
+  }
+  .right {
+    
+    width: 100% !important;
+    text-align: left;
+  }
+  .footer-right {
+    flex-direction: column;
+    width: 100% !important;
+    text-align: left;
+  }
+  .footer-logo img{
+    width:310px !important;
+  }
+  .bottom-container{
+    padding: 1rem;
+    justify-content: center;
+  }
+  .right-bottom-container{
     display: none;
   }
+  .app-buttons img{
+    width:300px !important;
+  }
+  .icons{
+    width: 100% !important;
+  }
+  .icons img{
+    margin-right:0.4rem;
+}
 }

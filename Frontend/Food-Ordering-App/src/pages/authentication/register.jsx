@@ -57,7 +57,7 @@ const handleRegister = async (e) =>{
       <div className="container">
         <div className="left-container">
           <div className="form">
-            <div className="logo">
+            <div className="authentication-logo">
               <img src={Logo} />
             </div>
             <h3 className="welcome-text">Welcome 👋</h3>

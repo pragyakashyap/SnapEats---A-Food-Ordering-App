@@ -117,5 +117,21 @@
     cursor: pointer;
   }
 
+
+  @media screen and (max-width:768px) {
+    .checkout-container{
+      flex-direction: column;
+      justify-content: center;
+    }
+    .order-details{
+      width: 80%;
+    }
+    .order-notes{
+      width: 50%  ;
+    }
+    .order-summary{
+      width: 80%;
+    }
+  }
   
   

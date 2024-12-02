@@ -4,7 +4,6 @@ import loc from "../../assets/images/Location.png";
 import "./navbar.css";
 import { Cart } from "../cart/cart";
 
-
 const Navbar = ({ isCartOpen, toggleCart }) => {
   const [location, setLocation] = useState("Regent Street, A4, A4201, London ");
   const [isEditing, setIsEditing] = useState(false);
@@ -46,7 +45,7 @@ const Navbar = ({ isCartOpen, toggleCart }) => {
           </>
         )}
       </div>
-<Cart isCartOpen={isCartOpen} toggleCart={toggleCart}/>
+      <Cart isCartOpen={isCartOpen} toggleCart={toggleCart} />
     </header>
   );
 };

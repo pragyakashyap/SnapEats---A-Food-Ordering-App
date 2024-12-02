@@ -261,3 +261,19 @@ gap: 12px;
 .profile-page-container{
     padding: 1rem;
 }
+
+@media screen  and (max-width:768px){
+  .profile-form{
+    flex-direction: column;
+  }
+  .top-info{
+    display: block;
+  }
+  .add-card{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .top-container p{
+    display: none;
+  }
+}

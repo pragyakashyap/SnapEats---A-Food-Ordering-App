@@ -48,7 +48,6 @@
 
 .rating-review{
   position: absolute;
-  bottom: -45%;
   left: 45%;
 }
 
@@ -86,3 +85,4 @@
   align-items: center;
   gap: 3px;
 }
+

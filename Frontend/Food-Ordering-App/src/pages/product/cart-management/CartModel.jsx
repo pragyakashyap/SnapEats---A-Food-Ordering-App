@@ -26,7 +26,7 @@ const CartModel = ({
     console.log(cartItems); 
     if (cardEmpty || total < 199) {
       toast.error(`Minimum delivery is  ₹199, You must Spend ₹${199-total} more for the checkout!`, {
-        duration: 3000, // Optional: how long the toast will appear (in ms)
+        duration: 3000, 
       });
       e.preventDefault();
       console.log("Card is empty, showing toast...");

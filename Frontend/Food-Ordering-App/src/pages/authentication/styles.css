@@ -21,7 +21,7 @@ form{
   display: flex;
   flex-direction: column;
 }
-.logo{
+.authentication-logo{
  text-align:center;
  margin-top: 35px;
 }

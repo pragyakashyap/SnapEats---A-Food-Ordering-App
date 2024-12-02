@@ -91,7 +91,7 @@ const Product = () => {
               <Burger addToCart={addToCart} />
             </div>
             {isCartOpen && (
-              <div className="cart-section">
+              <div className="cart-section" >
                 <CartModel
                   isCartOpen={isCartOpen}
                   toggleCart={toggleCart}

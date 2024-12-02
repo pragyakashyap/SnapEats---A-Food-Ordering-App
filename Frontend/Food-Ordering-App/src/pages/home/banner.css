@@ -93,7 +93,7 @@
 .description {
     color: black;
   font-size: 14px;
-  margin: 10px 0 15px 45px; /*top right bottom left*/
+  margin: 10px 0 15px 45px; 
 }
 
 .store-buttons {
@@ -107,7 +107,8 @@
 
 @media (max-width: 768px) {
   .banner-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .left-section {
@@ -121,12 +122,15 @@
     padding: 20px;
     text-align: center;
   }
-
   .subtitle-block {
     justify-content: center;
+    left: 0rem !important;
   }
-
+  .description{
+    margin: 0px;
+  }
   .store-buttons {
-    justify-content: center;
+   margin-left: 0px;
+   margin-top:20px;
   }
 }

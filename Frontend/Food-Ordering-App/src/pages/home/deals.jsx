@@ -3,6 +3,15 @@ import "./deals.css";
 
 const DealsSection = () => {
   const [deals, setDeals] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+  // Function to check screen width
+  const checkScreenWidth = () => {
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
 
   // Fetch deals from the database (mock API here)
   useEffect(() => {
@@ -10,14 +19,28 @@ const DealsSection = () => {
       .then((response) => response.json())
       .then((data) => setDeals(data))
       .catch((error) => console.error("Error fetching deals:", error));
+
+      checkScreenWidth(); // Check on initial load
+
+    const handleResize = () => {
+      checkScreenWidth();
+    }
+
+    // Add event listener to detect window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
     <div className="deals-section">
       <div className="top">
-      <h2>
-        Up to -40% 🎊 Order.uk exclusive deals
-      </h2>
+      
+      {isMobile ?<h3>Up to -40% Discount Offers 🎊 </h3>:<h2>Up to -40% 🎊 Order.uk exclusive deals</h2>}
+     
       <div className="categories">
         <button>Vegan</button>
         <button>Sushi</button>

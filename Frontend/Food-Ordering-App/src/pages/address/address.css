@@ -128,6 +128,17 @@
 
 
   @media screen and (max-width: 768px) {
-    
+    .update-address{
+      display: block;
+    }
+    .modal textarea{
+      width: 80%;
+    }
+    .cancel-address{
+      display: none;
+    }
+    .save-address{
+      width: 90%;
+    }
   }
   

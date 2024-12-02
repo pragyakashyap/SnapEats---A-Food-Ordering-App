@@ -39,7 +39,7 @@ const Burger = ({ addToCart }) => {
     },
   ];
   return (
-    <div className="categories-section">
+    <div className="product-categories-section">
       <h2 style={{ fontSize: "30px" }}>Burgers</h2>
       <div className="categories-container">
         {burgers.map((burger) => (

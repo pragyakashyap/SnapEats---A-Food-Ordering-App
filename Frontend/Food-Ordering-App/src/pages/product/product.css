@@ -1,62 +1,125 @@
 body{
-    margin: 0px;
+  margin: 0px;
 }
 .product-page{
-    margin: 0 2rem;
+  margin: 0 2rem;
 }
 
 .no-margin{
-    margin: 0px;
+  margin: 0px;
 }
 
 .add-to-cart{
-    padding: 1rem;
-    background-color: white;
-    opacity: 0.8; /* Makes the whole div semi-transparent */
-    border: 1px solid #eee;
-    display: inline-block;
-    border-radius: 25px 0px;
-    position: absolute;
-    right: -4%;
-    bottom: -5.5%;
-    cursor: pointer;
+  padding: 1rem;
+  background-color: white;
+  opacity: 0.8; /* Makes the whole div semi-transparent */
+  border: 1px solid #eee;
+  display: inline-block;
+  border-radius: 25px 0px;
+  position: absolute;
+  right: -4%;
+  bottom: -5.5%;
+  cursor: pointer;
 }
 
 /* General Layout */
 .main-content {
-    padding: 20px;
-  }
-  
-  .content-sections {
-    display: flex;
-    flex-wrap: nowrap;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .content-sections.cart-open {
-    gap: 20px; /* Space between sections when cart is open */
-  }
-  
-  .left-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
- 
-  
+  padding: 20px;
+}
 
-  
-  /* Adjust for responsive behavior */
-  @media (max-width: 768px) {
-    .content-sections {
-      flex-wrap: wrap; /* Wrap sections on smaller screens */
-    }
-  
-    .cart-section {
-      width: 100%; /* Full width cart on smaller screens */
-      border-left: none;
-      box-shadow: none;
-    }
+.content-sections {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.content-sections.cart-open {
+  gap: 20px; /* Space between sections when cart is open */
+}
+
+.left-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .content-sections {
+    flex-wrap: wrap;
   }
-  
+
+  .cart-section {
+    width: 100%; 
+    border-left: none;
+    box-shadow: none;
+  }
+  .product-page{
+    overflow-x: hidden;
+  }
+  .review-card-container{
+    overflow-x: scroll;
+    width: auto !important;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .cards{
+    width: 390px !important;
+  }
+  .review-profile{
+    width: 100%;
+    margin-right:80px;
+  }
+  .main-header{
+    flex-direction: column-reverse;
+    padding:1rem;
+  }
+  .rating-info{
+position: relative;
+margin-top: -20%;
+margin-left: 30%;
+  }
+  .restaurant-name{
+    font-size: 30.5px;
+  }
+  .info-badges{
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  }
+  .badge{
+    width:70%;
+    padding:1rem 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .no-margin{
+    overflow-x: hidden;
+  }
+  .review-section{
+    position: relative;
+    padding: 0px !important;
+    margin: 0px !important;
+    padding-left: 20px !important;
+    padding-bottom:40px !important;
+    padding-right:20px !important;
+
+  }
+  .rating-review{
+
+position: absolute !important;
+top:-10%;
+left:80% !important;
+  }
+  .rating-review img{
+    width: 67px !important;
+    height:78px !important;
+  }
+  .review-title{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+}

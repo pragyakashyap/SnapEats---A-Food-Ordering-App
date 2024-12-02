@@ -1,15 +1,15 @@
-.header-nav {
+.header-nav,.header-nav-left-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0px;
   margin: 25px 0px;
-  
 }
-
+.hamburger-navbar {
+  display: none;
+}
 body {
   font-size: 15px;
-  
 }
 .profile {
   display: flex;
@@ -21,7 +21,7 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-.buttons button {
+.header-buttons button {
   padding: 0.5rem;
   border-radius: 25px;
   width: 125px;
@@ -33,4 +33,52 @@ button:focus {
   background-color: #fc8a06;
   color: white;
   border: none;
+}
+.profile-cart-div {
+  display: none;
+}
+.header-buttons{
+  margin-left: 42px;
+}
+.header-cart-btn{
+  display:none;
+}
+@media screen and (max-width: 768px) {
+  .profile,.header-cart-btn {
+    width: 50%;
+    border-radius: 0px;
+  }
+  .hamburger-navbar {
+    display: flex;
+  
+  }
+  .profile-cart-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-buttons{
+    display: none;
+  }
+  .header-nav-left-info{
+    width:100%
+  }
+  .header-nav-right-info{
+    display: flex;
+  }
+  .header-nav{
+    display: block;
+  }
+  .header-cart-btn{
+    display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  justify-content: center;
+  cursor: pointer;
+  gap:8px;
+  font-size: 14px;
+  }
+
 }
