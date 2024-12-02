@@ -79,6 +79,11 @@
   }
   .hero-left{
     width: 100%;
+    padding-left: 0px;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    
   }
   .hero-left p{
     color: white;
@@ -89,5 +94,11 @@
     color: white;
     padding-bottom: 1rem;
     padding-top: 1rem;
+  }
+  .hero-search{
+    justify-content: center;
+  }
+  .hero-search button{
+    right:3rem;
   }
 }

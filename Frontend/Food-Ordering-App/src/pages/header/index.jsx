@@ -7,13 +7,13 @@ import cart from "../../assets/images/Cart.png";
 import { useState } from "react";
 
 
-const Header = () => {
+const Header = ({ isCartOpen, toggleCart }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/profile");
   };
 
-  const [cartOpen,setCartOpen] = useState(false);
+
 
   return (
     <div className='header-nav'>
@@ -37,7 +37,7 @@ const Header = () => {
         <img src={user} />
         <span>Hey {localStorage.getItem("username").split(" ")[0]}</span>
       </div> 
-      <div  className="header-cart-btn" style={{ cursor: "pointer",backgroundColor:"#028643" }} onClick={()=>setCartOpen(true)}>
+      <div  className="header-cart-btn" style={{ cursor: "pointer",backgroundColor:"#028643" }} onClick={toggleCart}>
       <img
         style={{ height: "30px", width: "30px", }}
         src={cart}

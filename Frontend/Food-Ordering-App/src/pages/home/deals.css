@@ -97,4 +97,12 @@
   .categories{
     display: none;
   }
+  .top{
+  padding: 10px;
+
+  }
+  .deals-container{
+    padding: 15px;
+  }
+
 }

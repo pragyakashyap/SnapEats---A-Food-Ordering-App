@@ -1,15 +1,15 @@
-body{
+body {
   margin: 0px;
 }
-.product-page{
+.product-page {
   margin: 0 2rem;
 }
 
-.no-margin{
+.no-margin {
   margin: 0px;
 }
 
-.add-to-cart{
+.add-to-cart {
   padding: 1rem;
   background-color: white;
   opacity: 0.8; /* Makes the whole div semi-transparent */
@@ -43,83 +43,94 @@ body{
   gap: 10px;
 }
 
-
-
-
-
 @media (max-width: 768px) {
   .content-sections {
     flex-wrap: wrap;
   }
 
   .cart-section {
-    width: 100%; 
+    width: 100%;
     border-left: none;
     box-shadow: none;
+    position: fixed;
+    top: 300px;
+    left: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
   }
-  .product-page{
+  .product-page {
     overflow-x: hidden;
   }
-  .review-card-container{
+  .review-card-container {
     overflow-x: scroll;
     width: auto !important;
     padding: 0px !important;
     margin: 0px !important;
   }
-  .cards{
+  .cards {
     width: 390px !important;
   }
-  .review-profile{
+  .review-profile {
     width: 100%;
-    margin-right:80px;
+    margin-right: 80px;
   }
-  .main-header{
+  .main-header {
     flex-direction: column-reverse;
-    padding:1rem;
+    padding: 1rem;
   }
-  .rating-info{
-position: relative;
-margin-top: -20%;
-margin-left: 30%;
+  .rating-info {
+    position: relative;
+    margin-top: -20%;
+    margin-left: 30%;
   }
-  .restaurant-name{
+  .restaurant-name {
     font-size: 30.5px;
   }
-  .info-badges{
-flex-direction: column;
-justify-content: center;
-align-items: center;
-  }
-  .badge{
-    width:70%;
-    padding:1rem 1rem;
+  .info-badges {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .no-margin{
+  .badge {
+    width: 70%;
+    padding: 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .no-margin {
     overflow-x: hidden;
   }
-  .review-section{
+  .review-section {
     position: relative;
     padding: 0px !important;
     margin: 0px !important;
     padding-left: 20px !important;
-    padding-bottom:40px !important;
-    padding-right:20px !important;
-
+    padding-bottom: 40px !important;
+    padding-right: 20px !important;
   }
-  .rating-review{
-
-position: absolute !important;
-top:-10%;
-left:80% !important;
+  .rating-review {
+    position: absolute !important;
+    top: -10%;
+    left: 80% !important;
   }
-  .rating-review img{
+  .rating-review img {
     width: 67px !important;
-    height:78px !important;
+    height: 78px !important;
   }
-  .review-title{
+  .review-title {
     padding: 0px !important;
     margin: 0px !important;
-}
+  }
+  .cart-section {
+    position: absolute;
+  }
+  .main-content{
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  }
 }

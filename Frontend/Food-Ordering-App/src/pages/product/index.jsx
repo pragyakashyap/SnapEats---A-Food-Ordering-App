@@ -77,7 +77,8 @@ const Product = () => {
     <>
       <div className="product-page">
         <Navbar isCartOpen={isCartOpen} toggleCart={toggleCart} />
-        <Header />
+        <Header isCartOpen={isCartOpen}
+        toggleCart={toggleCart} />
         <McDonaldsHeader />
         <OffersContainer />
       </div>
