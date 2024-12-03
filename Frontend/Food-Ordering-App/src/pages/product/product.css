@@ -130,7 +130,4 @@ body {
   .cart-section {
     position: absolute;
   }
-  .main-content{
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  }
 }
