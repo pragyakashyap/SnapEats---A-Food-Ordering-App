@@ -13,7 +13,7 @@ import { getUser } from "../../services";
 const Profile = () => {
   const navigate = useNavigate();
   const navigateBack = () => {
-    navigate("/");
+    navigate("/home");
   };
 
   const [profile, setProfile] = useState({

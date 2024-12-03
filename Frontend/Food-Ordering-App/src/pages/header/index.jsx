@@ -18,7 +18,7 @@ const Header = ({ isCartOpen, toggleCart, scrollToCategories, scrollToDeals, scr
           <img style={{ width: "150px" }} src={Logo} />
         </div>
         <div className="header-buttons">
-          <button className="default-selected" onClick={() => navigate("/")}>Home</button>
+          <button className="default-selected" onClick={() => navigate("/home")}>Home</button>
           <button onClick={scrollToCategories}>Browse Menu</button>
           <button onClick={scrollToDeals}>Special Offers</button>
           <button onClick={scrollToRestaurants}>Restaurants</button>
