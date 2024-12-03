@@ -9,10 +9,12 @@ import { useNavigate } from "react-router-dom";
 import Wallet from "./wallet.png";
 import Methods from "./options";
 import { useState,useEffect } from "react";
+import AddCardModal from "../profile/AddCardModal";
 
 
 const Payment = () => {
     const [totalPrice, setTotalPrice] = useState(0); 
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         const price = localStorage.getItem("totalPrice"); // Get the total price from localStorage
@@ -29,6 +31,10 @@ const Payment = () => {
   const handleClick = () => {
     navigate("/orderPlaced");
    
+  };
+
+  const handleAddClick = () => {
+    setIsModalOpen(true); // Open modal
   };
 
   return (
@@ -69,7 +75,7 @@ const Payment = () => {
 
             <Methods />
 
-            <div className="payment-add-card" >
+            <div className="payment-add-card" onClick={handleAddClick}>
             <img style={{width:'20px', height:'20px' }} src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732710260/Add_g92uk2.png"/>
             <p>Add Debit Card</p>
             </div>
@@ -85,6 +91,12 @@ const Payment = () => {
             </button>
           </div>
         </div>
+        {isModalOpen && (
+        <AddCardModal
+          onClose={() => setIsModalOpen(false)}
+          
+        />
+      )}
       </div>
       <Footer />
     </>

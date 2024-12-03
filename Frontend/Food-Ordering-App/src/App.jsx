@@ -11,6 +11,9 @@ import Profile from "./pages/profile";
 
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./ProtectedRoute";
+import DealsSection from "./pages/home/deals";
+import Restaurant from "./pages/home/restaurants";
+import Categories from "./pages/home/categories";
 
 function App() {
   return (
@@ -29,6 +32,7 @@ function App() {
           <Route path="/orderPlaced" element={<ProtectedRoute><OrderPlaced /></ProtectedRoute>} />
           <Route path="/address" element={<ProtectedRoute><Address /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+         
         </Routes>
       </BrowserRouter>
     </>

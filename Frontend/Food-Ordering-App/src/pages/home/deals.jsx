@@ -15,7 +15,7 @@ const DealsSection = () => {
 
   // Fetch deals from the database (mock API here)
   useEffect(() => {
-    fetch("http://localhost:5000/api/deals") // Replace with your backend API endpoint
+    fetch("https://snapeats-a-food-ordering-app.onrender.com/api/deals") // Replace with your backend API endpoint
       .then((response) => response.json())
       .then((data) => setDeals(data))
       .catch((error) => console.error("Error fetching deals:", error));
@@ -50,7 +50,7 @@ const DealsSection = () => {
       </div>
       <div className="deals-container">
         {deals.map((deal) => (
-          <div className="deal-card" key={deal.id}>
+          <div className="deal-card" key={deal._id}>
             <div className="discount">{deal.discount}</div>
             <img src={deal.image} alt={deal.name} className="deal-image" />
             <div className="deal-info">
