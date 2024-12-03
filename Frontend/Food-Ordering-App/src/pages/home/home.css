@@ -1,133 +1,131 @@
-.home-page{
+.home-page {
   padding-left: 2rem;
   padding-right: 2rem;
- }
- 
- .restaurant-container {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
-     /* Remove gap and use margin for control */
-     
-   }
- .restaurant-image {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 8px;
-     margin-bottom: 10px;
-   }
-   .restaurant-list {
-     flex: 1 1 calc(16.66% - 10px); /* Adjust card width accordingly */
-     max-width: calc(16.66% - 10px);
-     margin: 5px; /* Controls the gap between cards */
-   }
-   .ads{
-     display: flex;
-     justify-content: space-between;
-   }
-   @media screen and (max-width: 768px) {
-     .home-page{
-       padding-left: 0rem;
-       padding-right: 0rem;
-       overflow-x: hidden !important;
-     }
-     .category-card{
-       max-width: 189px;
-       margin-right: 15px;
-       margin-bottom: 20px;
-     }
-     .unique-category-card{
-       margin-right: 15px;
-     }
-     .overlay-container{
- width:88% !important;
- left:2.5% !important;
- border-radius: 30px !important;
- bottom:0px ;
- top: auto !important;
- z-index:1000;
- padding: 2px !important;
- padding-left: 20px !important;
- }
- .icon-container{
-   display: none !important;
- }
- .overlay-content{
-   padding: 0px;
- }
-     .unique-categories-container{
-       flex-wrap: nowrap !important;
-       overflow-x: scroll;
-       scrollbar-width: 0px;
-     }
-     .banner-container{
-       width: 95%;
-       margin-left: 10px;
-       border-radius: 12px;
-     }
-     .categories-section{
-       background-color: #D9D9D980;
-       /* padding:0px; */
-     }
-     .unique-categories-section{
-       flex-direction: column;
-     }
-     .card-container{
-       flex-direction: column;
-       padding-left: 20px !important;
-       padding-right:20px !important;
-     }
-     .card{
-       width: 100% !important;
-     }
-     .card-content p{
-       font-size: 18px;
-     }
-     .faq-section{
-       background-color: transparent !important;
-     }
-     .faq-heading{
-       flex-direction: column;
-     }
-     .faq-menu{
-       display: none !important;
-     }
-     .steps-container{
-       flex-direction: column !important;
-       padding: 0rem;
-     }
-     .left-faqs{
-       width: 100% !important;
-     }
-     .steps{
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       display: flex;
-       padding-top: 20px;
-       padding-bottom: 20px;
-     }
-     .stats-section{
- flex-direction: column;
-     }
-     .stat-heading{
-       font-size: 64px;
-       font-weight: 300;
-     }
-     .stat-description{
-       font-size: 24px !important;
-       font-weight: 700 !important;
-     }
-     .right-faqs{
-       background-color: #03081F;
-       width: 120%;
-      margin-left:-30px !important;
-      border-radius: 20px;
-     }
-     .faq-card{
-       width:235px;
-       height:285px
- }
 }
- 
+
+.restaurant-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Remove gap and use margin for control */
+}
+.restaurant-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.restaurant-list {
+  flex: 1 1 calc(16.66% - 10px); /* Adjust card width accordingly */
+  max-width: calc(16.66% - 10px);
+  margin: 5px; /* Controls the gap between cards */
+}
+.ads {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .home-page {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow-x: hidden !important;
+  }
+  .category-card {
+    max-width: 189px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+  .unique-category-card {
+    margin-right: 15px;
+  }
+  .overlay-container {
+    width: 88% !important;
+    left: 2.5% !important;
+    border-radius: 30px !important;
+    bottom: 0px;
+    top: auto !important;
+    z-index: 1000;
+    padding: 2px !important;
+    padding-left: 20px !important;
+  }
+  .icon-container {
+    display: none !important;
+  }
+  .overlay-content {
+    padding: 0px;
+  }
+  .unique-categories-container {
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+    scrollbar-width: 0px;
+  }
+  .banner-container {
+    width: 95%;
+    margin-left: 10px;
+    border-radius: 12px;
+  }
+  .categories-section {
+    background-color: #d9d9d980;
+    /* padding:0px; */
+  }
+  .unique-categories-section {
+    flex-direction: column;
+  }
+  .card-container {
+    flex-direction: column;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .card {
+    width: 100% !important;
+  }
+  .card-content p {
+    font-size: 18px;
+  }
+  .faq-section {
+    background-color: transparent !important;
+  }
+  .faq-heading {
+    flex-direction: column;
+  }
+  .faq-menu {
+    display: none !important;
+  }
+  .steps-container {
+    flex-direction: column !important;
+    padding: 0rem;
+  }
+  .left-faqs {
+    width: 100% !important;
+  }
+  .steps {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .stats-section {
+    flex-direction: column;
+  }
+  .stat-heading {
+    font-size: 64px;
+    font-weight: 300;
+  }
+  .stat-description {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+  }
+  .right-faqs {
+    background-color: #03081f;
+    width: 120%;
+    margin-left: -30px !important;
+    border-radius: 20px;
+  }
+  .faq-card {
+    width: 235px;
+    height: 285px;
+  }
+}

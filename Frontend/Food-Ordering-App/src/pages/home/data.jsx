@@ -10,12 +10,12 @@ const Data = () => {
   ];
 
   return (
-    <div className='stats-section'>
+    <div className="stats-section">
       {statsData.map((stat, index) => (
-        <div className='stat' key={index}>
-          <div className='stat-heading'>{stat.value}</div>
-          <div className='stat-description'>{stat.label}</div>
-          {index < statsData.length - 1 && <div className='divider'></div>}
+        <div className="stat" key={index}>
+          <div className="stat-heading">{stat.value}</div>
+          <div className="stat-description">{stat.label}</div>
+          {index < statsData.length - 1 && <div className="divider"></div>}
         </div>
       ))}
     </div>

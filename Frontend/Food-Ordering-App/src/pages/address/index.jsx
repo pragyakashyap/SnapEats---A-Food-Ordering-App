@@ -125,7 +125,10 @@ const Address = () => {
                   <button className="default-tag">Default</button>
                 )}
                 <div className="actions">
-                  <button className="edit-button" onClick={() => handleEdit(address)}>
+                  <button
+                    className="edit-button"
+                    onClick={() => handleEdit(address)}
+                  >
                     Edit
                   </button>
                   <button
@@ -142,10 +145,10 @@ const Address = () => {
 
         {isModalOpen && (
           <AddressModal
-          onClose={() => {
-            setEditingAddress(null); // Clear the editing state when closing
-            setIsModalOpen(false);
-          }}
+            onClose={() => {
+              setEditingAddress(null); // Clear the editing state when closing
+              setIsModalOpen(false);
+            }}
             onSave={handleSave}
             initialData={editingAddress}
           />

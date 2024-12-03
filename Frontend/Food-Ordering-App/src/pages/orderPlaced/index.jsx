@@ -21,7 +21,7 @@ const OrderPlaced = () => {
   }, [location.state]);
 
   const handleGoHome = () => {
-    localStorage.removeItem("cartItems")
+    localStorage.removeItem("cartItems");
     navigate("/"); // Redirect to home or any page
   };
 

@@ -1,7 +1,7 @@
 import "./Restaurant.css";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-const Restaurant = ({title}) => {
+const Restaurant = ({ title }) => {
   const popularRestaurants = [
     {
       name: "McDonald’s London ",
@@ -35,18 +35,22 @@ const Restaurant = ({title}) => {
     },
   ];
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleClick = ()=>{
+  const handleClick = () => {
     navigate("/product");
-  }
+  };
 
   return (
     <div className="unique-categories-section">
       <h2>{title}</h2>
       <div className="unique-categories-container">
         {popularRestaurants.map((restaurant, index) => (
-          <div onClick={handleClick} className="unique-category-card" key={index}>
+          <div
+            onClick={handleClick}
+            className="unique-category-card"
+            key={index}
+          >
             <img
               src={restaurant.image}
               alt={restaurant.name}

@@ -1,69 +1,68 @@
-.payment-page{
-    margin: 0 2rem;
-    margin-bottom: 2rem;
+.payment-page {
+  margin: 0 2rem;
+  margin-bottom: 2rem;
 }
-.payment-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+.payment-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
-.payment-methods{
-    width: 60%;
+.payment-methods {
+  width: 60%;
 }
-.proceed-payment{
-    flex: 1;
-    border: 1px solid black;
-    border-radius: 12px;
-    padding: 1rem;
+.proceed-payment {
+  flex: 1;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 1rem;
 }
-.amount-paid{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.amount-paid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.checkout-btn{
-    border-radius: 25px;
+.checkout-btn {
+  border-radius: 25px;
 }
-.wallet{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #FFE8CE;
-    border-radius: 30px;
-    margin-bottom: 12px;
+.wallet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ffe8ce;
+  border-radius: 30px;
+  margin-bottom: 12px;
 }
-.left-wallet{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+.left-wallet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 .payment-radio {
-    margin-left: auto; /* Push the radio button to the right */
-  }
+  margin-left: auto; /* Push the radio button to the right */
+}
 
-  .payment-add-card{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #FFE8CE;
-    border-radius: 30px;
-    padding-left:1rem ;
-    margin-bottom: 24px;
-    
-  }
+.payment-add-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ffe8ce;
+  border-radius: 30px;
+  padding-left: 1rem;
+  margin-bottom: 24px;
+}
 
-  @media  screen and (max-width:768px) {
-    .payment-container{
-        display: block;
-    }
-    .payment-methods{
-        width:90%
-    }
-    .proceed-payment{
-       padding: 12px;
-       width: 85%;
-    }
+@media screen and (max-width: 768px) {
+  .payment-container {
+    display: block;
   }
+  .payment-methods {
+    width: 90%;
+  }
+  .proceed-payment {
+    padding: 12px;
+    width: 85%;
+  }
+}

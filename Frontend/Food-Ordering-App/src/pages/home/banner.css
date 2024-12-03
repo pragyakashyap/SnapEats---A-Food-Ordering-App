@@ -14,7 +14,7 @@
 
 .left-section {
   width: 50%;
-  
+
   z-index: 1;
 }
 
@@ -58,7 +58,7 @@
 .subtitle-block {
   display: inline-flex;
   align-items: center;
-  background-color: #03081F;
+  background-color: #03081f;
   padding: 8px 30px;
   border-radius: 25px;
   margin-bottom: 15px;
@@ -67,12 +67,10 @@
   font-weight: bold;
   position: relative;
   left: -10rem;
- 
-  
 }
 
 .highlight-text {
-  color: #FC8A06;
+  color: #fc8a06;
   font-size: 24px;
   font-weight: 500;
   text-decoration: underline;
@@ -91,13 +89,13 @@
 }
 
 .description {
-    color: black;
+  color: black;
   font-size: 14px;
-  margin: 10px 0 15px 45px; 
+  margin: 10px 0 15px 45px;
 }
 
 .store-buttons {
-    margin-left: 4rem;
+  margin-left: 4rem;
 }
 
 .store-image {
@@ -126,11 +124,11 @@
     justify-content: center;
     left: 0rem !important;
   }
-  .description{
+  .description {
     margin: 0px;
   }
   .store-buttons {
-   margin-left: 0px;
-   margin-top:20px;
+    margin-left: 0px;
+    margin-top: 20px;
   }
 }

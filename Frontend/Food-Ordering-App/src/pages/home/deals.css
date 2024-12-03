@@ -1,6 +1,5 @@
 .deals-section {
   padding: 50px 20px;
-  
 }
 
 .deals-section h2 {
@@ -22,18 +21,18 @@
   border: none;
 }
 
-.categories button.active  {
+.categories button.active {
   border: 1px solid orange;
   color: orange;
   font-weight: bold;
 }
-.categories button:focus{
+.categories button:focus {
   border: 1px solid orange;
   color: orange;
   font-weight: bold;
 }
 
-.categories button:hover{
+.categories button:hover {
   pointer-events: none;
 }
 
@@ -78,14 +77,13 @@
 }
 
 .deal-info h4 {
- 
   font-weight: bold;
 
   color: white;
 }
 
 .deal-info p {
-  color: #FC8A06
+  color: #fc8a06;
 }
 
 .top {
@@ -93,16 +91,14 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width:768px) {
-  .categories{
+@media screen and (max-width: 768px) {
+  .categories {
     display: none;
   }
-  .top{
-  padding: 10px;
-
+  .top {
+    padding: 10px;
   }
-  .deals-container{
+  .deals-container {
     padding: 15px;
   }
-
 }

@@ -1,6 +1,5 @@
-import React from "react";
 import appStore from "../../assets/images/app-store-badges-en 1.png";
-import "./banner.css"
+import "./banner.css";
 import Logo from "../../assets/images/LOGO 1.png";
 
 const AppDownloadBanner = () => {
@@ -19,7 +18,7 @@ const AppDownloadBanner = () => {
         {/* Right side - Content */}
         <div className="title-block">
           <div className="main-title">
-            <img style={{width:'150px'}} src={Logo} alt="" />
+            <img style={{ width: "150px" }} src={Logo} alt="" />
             ing is more
           </div>
           <div className="subtitle-block">
@@ -31,11 +30,11 @@ const AppDownloadBanner = () => {
             Download the Orderuk app for faster ordering
           </p>
           <div className="store-buttons">
-              <img
-                src={appStore}
-                alt="Download on App Store"
-                className="store-image"
-              />
+            <img
+              src={appStore}
+              alt="Download on App Store"
+              className="store-image"
+            />
           </div>
         </div>
       </div>

@@ -23,11 +23,16 @@ const CartModel = ({
 
   const navigate = useNavigate();
   const handleClick = (e) => {
-    console.log(cartItems); 
+    console.log(cartItems);
     if (cardEmpty || total < 199) {
-      toast.error(`Minimum delivery is  ₹199, You must Spend ₹${199-total} more for the checkout!`, {
-        duration: 3000, 
-      });
+      toast.error(
+        `Minimum delivery is  ₹199, You must Spend ₹${
+          199 - total
+        } more for the checkout!`,
+        {
+          duration: 3000,
+        }
+      );
       e.preventDefault();
       console.log("Card is empty, showing toast...");
     } else {
@@ -133,12 +138,11 @@ const CartModel = ({
       )}
 
       <button
-       
         className="checkout-button"
         onMouseDown={handleClick}
-       style={{ backgroundColor: cardEmpty ? "#FFB1B1" : "" }}
+        style={{ backgroundColor: cardEmpty ? "#FFB1B1" : "" }}
       >
-        <FontAwesomeIcon icon={faArrowCircleRight} size="2x"/>
+        <FontAwesomeIcon icon={faArrowCircleRight} size="2x" />
         <span style={{ width: "80%", fontSize: "18px" }}>Checkout</span>
       </button>
     </div>

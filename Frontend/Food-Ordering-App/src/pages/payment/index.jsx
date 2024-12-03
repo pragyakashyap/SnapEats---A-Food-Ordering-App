@@ -2,26 +2,24 @@ import "./payment.css";
 import Navbar from "../navbar";
 import Header from "../header";
 import Footer from "../footer";
-import options from "./options";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import Wallet from "./wallet.png";
 import Methods from "./options";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import AddCardModal from "../profile/AddCardModal";
 
-
 const Payment = () => {
-    const [totalPrice, setTotalPrice] = useState(0); 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    useEffect(() => {
-        const price = localStorage.getItem("totalPrice"); // Get the total price from localStorage
-        if (price) {
-          setTotalPrice(price); // Update the state
-        }
-      }, []);
+  useEffect(() => {
+    const price = localStorage.getItem("totalPrice"); // Get the total price from localStorage
+    if (price) {
+      setTotalPrice(price); // Update the state
+    }
+  }, []);
 
   const navigate = useNavigate();
   const navigateBack = () => {
@@ -30,7 +28,6 @@ const Payment = () => {
 
   const handleClick = () => {
     navigate("/orderPlaced");
-   
   };
 
   const handleAddClick = () => {
@@ -76,8 +73,11 @@ const Payment = () => {
             <Methods />
 
             <div className="payment-add-card" onClick={handleAddClick}>
-            <img style={{width:'20px', height:'20px' }} src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732710260/Add_g92uk2.png"/>
-            <p>Add Debit Card</p>
+              <img
+                style={{ width: "20px", height: "20px" }}
+                src="https://res.cloudinary.com/dft6bqu4v/image/upload/v1732710260/Add_g92uk2.png"
+              />
+              <p>Add Debit Card</p>
             </div>
           </div>
           <div className="proceed-payment">
@@ -91,12 +91,7 @@ const Payment = () => {
             </button>
           </div>
         </div>
-        {isModalOpen && (
-        <AddCardModal
-          onClose={() => setIsModalOpen(false)}
-          
-        />
-      )}
+        {isModalOpen && <AddCardModal onClose={() => setIsModalOpen(false)} />}
       </div>
       <Footer />
     </>

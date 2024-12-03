@@ -62,7 +62,7 @@ const handleRegister = async (e) =>{
             </div>
             <h3 className="welcome-text">Welcome 👋</h3>
             <p className="sub-text">
-              Today is a new day. It’s your day. You shape it. <br />
+              Today is a new day. It&apos;s your day. You shape it. <br />
               Sign up to start ordering.
             </p>
             <form className="form" onSubmit={handleRegister}>

@@ -7,7 +7,7 @@ import Footer from "../footer";
 import "./home.css";
 import Faq from "./faq";
 import Data from "./data";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import Navbar from "../navbar";
 import Restaurant from "./restaurants";
 import Cards from "./card";
@@ -22,16 +22,18 @@ const Home = () => {
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
-  
+
   return (
     <>
-    <div className="home-page">
-      <Navbar/>
-      <Header  scrollToCategories={() => scrollToSection(categoriesRef)}
+      <div className="home-page">
+        <Navbar />
+        <Header
+          scrollToCategories={() => scrollToSection(categoriesRef)}
           scrollToDeals={() => scrollToSection(dealsRef)}
-          scrollToRestaurants={() => scrollToSection(restaurantsRef)} />
-      <Hero/>
-      <div ref={dealsRef}>
+          scrollToRestaurants={() => scrollToSection(restaurantsRef)}
+        />
+        <Hero />
+        <div ref={dealsRef}>
           <DealsSection />
         </div>
         <div ref={categoriesRef}>
@@ -40,12 +42,12 @@ const Home = () => {
         <div ref={restaurantsRef}>
           <Restaurant title="Popular Restaurants" />
         </div>
-      <AppDownloadBanner/>
-      <Cards/>
-      <Faq/>
-      <Data/>
-    </div>
-    <Footer/>
+        <AppDownloadBanner />
+        <Cards />
+        <Faq />
+        <Data />
+      </div>
+      <Footer />
     </>
   );
 };

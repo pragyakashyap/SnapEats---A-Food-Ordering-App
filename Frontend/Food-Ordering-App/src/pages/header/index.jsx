@@ -5,7 +5,13 @@ import hamburgerPng from "../../assets/images/Menu.png";
 import { useNavigate } from "react-router-dom";
 import cart from "../../assets/images/cart.png";
 
-const Header = ({ isCartOpen, toggleCart, scrollToCategories, scrollToDeals, scrollToRestaurants  }) => {
+const Header = ({
+  isCartOpen,
+  toggleCart,
+  scrollToCategories,
+  scrollToDeals,
+  scrollToRestaurants,
+}) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/profile");
@@ -18,7 +24,9 @@ const Header = ({ isCartOpen, toggleCart, scrollToCategories, scrollToDeals, scr
           <img style={{ width: "150px" }} src={Logo} />
         </div>
         <div className="header-buttons">
-          <button className="default-selected" onClick={() => navigate("/")}>Home</button>
+          <button className="default-selected" onClick={() => navigate("/")}>
+            Home
+          </button>
           <button onClick={scrollToCategories}>Browse Menu</button>
           <button onClick={scrollToDeals}>Special Offers</button>
           <button onClick={scrollToRestaurants}>Restaurants</button>

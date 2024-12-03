@@ -8,8 +8,8 @@ import { login } from "../../services";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email:null,
-    password:null
+    email: null,
+    password: null,
   });
 
   const handleChange = (event) => {
@@ -20,20 +20,20 @@ const Login = () => {
   };
 
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate()
-  const handleClick = ()=>{
-    navigate("/register")
-  }
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/register");
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-  
+
     try {
       setLoading(true);
-  
+
       // Make the API call
       const response = await login(formData);
-  
+
       // Handle success response (status 200)
       if (response && response.token) {
         toast.success(response.message || "Login successful!"); // Success toast
@@ -53,7 +53,6 @@ const Login = () => {
       setLoading(false); // Stop loading spinner
     }
   };
-  
 
   return (
     <>
@@ -87,10 +86,18 @@ const Login = () => {
                 placeholder="At least 8 characters"
               />
 
-              <button type="submit" disabled={loading} className="Login">{loading?"Loading...":"Sign in"}</button>
+              <button type="submit" disabled={loading} className="Login">
+                {loading ? "Loading..." : "Sign in"}
+              </button>
             </form>
             <p className="signup-text">
-            Don&apos;t you have an account?  <span onClick={handleClick} style={{color:'#FC8A06',cursor: 'pointer'}}>Sign up</span>
+              Don&apos;t you have an account?{" "}
+              <span
+                onClick={handleClick}
+                style={{ color: "#FC8A06", cursor: "pointer" }}
+              >
+                Sign up
+              </span>
             </p>
           </div>
         </div>
