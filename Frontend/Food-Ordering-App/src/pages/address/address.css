@@ -140,5 +140,17 @@
   }
   .update-address input {
     width: 80%;
-}
+  }
+  .address-page {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    overflow-x: hidden !important;
+  }
+  .address{
+    margin: 0px 2rem;
+  }
+  .address-list{
+    justify-content: center;
+    align-items: center;
+  }
 }

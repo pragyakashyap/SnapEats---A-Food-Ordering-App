@@ -17,7 +17,7 @@
     background-color:#03081F; /* Semi-transparent background */
     padding: 25px;
     border-radius: 8px;
-    /* z-index: 1000; Make sure it stays on top */
+    z-index: 1000;
     width: 20%;
   }
   
@@ -30,5 +30,15 @@
     .map-container{
       margin: 2rem 2px;
       margin-bottom: 5rem;
+    }
+    .overlay-container {
+      width: 88% !important;
+      left: 2.5% !important;
+      border-radius: 30px !important;
+      bottom: 0px;
+      top: auto !important;
+      z-index: 1000;
+      padding: 2px !important;
+      padding-left: 20px !important;
     }
   }

@@ -39,16 +39,7 @@
   .unique-category-card {
     margin-right: 15px;
   }
-  .overlay-container {
-    width: 88% !important;
-    left: 2.5% !important;
-    border-radius: 30px !important;
-    bottom: 0px;
-    top: auto !important;
-    z-index: 1000;
-    padding: 2px !important;
-    padding-left: 20px !important;
-  }
+  
   .icon-container {
     display: none !important;
   }
