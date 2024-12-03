@@ -3,7 +3,7 @@ import Logo from "../../assets/images/LOGO 1.png";
 import user from "../../assets/images/user.png";
 import hamburgerPng from "../../assets/images/Menu.png";
 import { useNavigate } from "react-router-dom";
-import cart from "../../assets/images/Cart.png";
+import cart from "../../assets/images/cart.png";
 
 const Header = ({ isCartOpen, toggleCart, scrollToCategories, scrollToDeals, scrollToRestaurants  }) => {
   const navigate = useNavigate();
