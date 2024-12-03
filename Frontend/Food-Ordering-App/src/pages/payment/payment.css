@@ -55,6 +55,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .payment-page {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    overflow-x: hidden !important;
+  }
   .payment-container {
     display: block;
   }

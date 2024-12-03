@@ -29,4 +29,9 @@
   .items-ordered {
     padding: 12px;
   }
+  .order-success-page {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    overflow-x: hidden !important;
+  }
 }
