@@ -13,7 +13,17 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Allow requests from your React frontend
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      "http://localhost:5173",  // Localhost for development
+      "https://674f02ee43d40511611d1e22--snapeats-food-ordering-app-1.netlify.app"  // Netlify app domain
+    ];
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true); // Allow the request
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: "GET,POST,PUT,DELETE", // Specify allowed HTTP methods
   allowedHeaders: ["Content-Type", "Authorization"] // Specify allowed headers
 };
