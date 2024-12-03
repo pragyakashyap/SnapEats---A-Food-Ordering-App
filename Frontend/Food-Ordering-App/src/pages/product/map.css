@@ -25,3 +25,10 @@
     color: white;
     padding: 1rem;
   }
+
+  @media (max-width:768px) {
+    .map-container{
+      margin: 2rem 2px;
+      margin-bottom: 5rem;
+    }
+  }

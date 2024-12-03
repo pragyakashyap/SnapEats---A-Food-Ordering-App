@@ -44,6 +44,17 @@ body {
 }
 
 @media (max-width: 768px) {
+  .product-page {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    overflow-x: hidden !important;
+  }
+  .product-categories-section{
+    padding: 20px;
+  }
+  .main-content{
+    padding: 0px;
+  }
   .content-sections {
     flex-wrap: wrap;
   }

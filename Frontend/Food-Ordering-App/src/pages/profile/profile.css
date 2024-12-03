@@ -263,8 +263,14 @@ gap: 12px;
 }
 
 @media screen  and (max-width:768px){
+  .profile-page{
+    margin-left: 0rem;
+    margin-right: 0rem;
+    overflow-x: hidden !important;
+  }
   .profile-form{
     flex-direction: column;
+    
   }
   .top-info{
     display: block;
@@ -275,5 +281,14 @@ gap: 12px;
   }
   .top-container p{
     display: none;
+  }
+  .modal{
+    margin: 20px;
+  }
+  .order-title{
+    margin: 0 2rem;
+  }
+  .profile-page-container{
+    margin: 0 2rem;
   }
 }

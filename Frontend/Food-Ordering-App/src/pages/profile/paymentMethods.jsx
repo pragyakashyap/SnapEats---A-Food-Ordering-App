@@ -7,9 +7,9 @@ import "./profile.css";
 
 const PaymentMethods = () => {
   const [cards, setCards] = useState([
-    { id: 1, name: "Mike Ross", cardNumber: "xxxx xxxx xxxx 1234", cvv: "xxx" },
-    { id: 2, name: "Mike Ross", cardNumber: "xxxx xxxx xxxx 6789", cvv: "xxx" },
-    { id: 3, name: "Mike Ross", cardNumber: "xxxx xxxx xxxx 3468", cvv: "xxx" },
+    { id: 1, name: localStorage.getItem("username") , cardNumber: "xxxx xxxx xxxx 1234", cvv: "xxx" },
+    { id: 2, name: localStorage.getItem("username"), cardNumber: "xxxx xxxx xxxx 6789", cvv: "xxx" },
+    { id: 3, name: localStorage.getItem("username"), cardNumber: "xxxx xxxx xxxx 3468", cvv: "xxx" },
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);

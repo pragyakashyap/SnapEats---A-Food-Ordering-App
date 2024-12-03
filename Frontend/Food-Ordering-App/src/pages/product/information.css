@@ -33,3 +33,9 @@
 h2{
     font-size: 28px;
 }
+
+@media (max-width:768px) {
+  .information-section{
+    display: none;
+  }
+}

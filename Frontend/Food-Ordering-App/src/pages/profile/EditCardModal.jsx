@@ -40,7 +40,7 @@ const EditCardModal = ({ card, onClose, onSave }) => {
             <label>Expiration</label>
             <input
               type="text"
-              name="name"
+              name="expiration" // Updated to correctly reference expiration
               value={formData.expiration}
               onChange={handleChange}
               placeholder="Card Expiration"
@@ -51,7 +51,7 @@ const EditCardModal = ({ card, onClose, onSave }) => {
             <label>CVV</label>
             <input
               type="text"
-              name="name"
+              name="cvv" // Updated to correctly reference cvv
               value={formData.cvv}
               onChange={handleChange}
               placeholder="Card CVV"
@@ -62,7 +62,7 @@ const EditCardModal = ({ card, onClose, onSave }) => {
             <label>Name on card</label>
             <input
               type="text"
-              name="name"
+              name="name" // Correct name for cardholder name
               value={formData.name}
               onChange={handleChange}
               placeholder="Cardholder Name"
