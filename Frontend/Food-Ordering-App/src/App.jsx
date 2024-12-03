@@ -23,8 +23,8 @@ function App() {
         future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
       >
         <Routes>
-        <Route  path="/" element={<Navigate to="/login" />} />
-          <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+      
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/product" element={<ProtectedRoute><Product /></ProtectedRoute>} />

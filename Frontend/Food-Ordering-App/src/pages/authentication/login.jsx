@@ -40,7 +40,7 @@ const Login = () => {
         localStorage.setItem("token", response.token);
         localStorage.setItem("userId", response.id);
         localStorage.setItem("username", response.name);
-        navigate("/home"); // Redirect to homepage
+        navigate("/"); // Redirect to homepage
       } else if (response && response.message) {
         // Handle cases where the backend returns a 400 response with a message
         toast.error(response.message || "Invalid credentials."); // Error toast
