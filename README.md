@@ -78,6 +78,14 @@
 
 ## Screenshots
 
+![Restaurant Detail Page Desktoprestaurant detail (6)](https://github.com/user-attachments/assets/576d611d-245e-4210-b53f-7ba73f509262)
+![Restaurant Detail Page Desktoprestaurant detail (7)](https://github.com/user-attachments/assets/8a93d31f-d414-4bf1-bf87-950302bde89e)
+![Restaurant Detail Page Desktoprestaurant detail (8)](https://github.com/user-attachments/assets/c9decf82-d329-42be-bf0d-229a3e8d531b)
+![Ordering Pagerestaurant detail (4)](https://github.com/user-attachments/assets/05e6d257-46e0-429c-ab99-67b58c4e2dba)
+![Ordering Pagerestaurant detail (5)](https://github.com/user-attachments/assets/388cd196-277b-4459-ac43-6458ae3cefb2)
+![Ordering Pagerestaurant detail (6)](https://github.com/user-attachments/assets/16e468ac-c53e-41ae-ad6e-4d1b8865862f)
+![Ordering Pagerestaurant detail (7)](https://github.com/user-attachments/assets/e1ae089e-0692-48c2-b38b-37822a8ebb96)
+![Ordering Pagerestaurant detail (8)](https://github.com/user-attachments/assets/6ab66ee3-bba6-4cbc-9d18-f081faa4fac0)
 
 
 ## Future Enhancements
